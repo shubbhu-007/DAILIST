@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+header{
+    width: 100%;
+    text-align: center;
+    background-color: #054635;
+}
+header h1{
+    letter-spacing:1rem;
+    padding: 1.2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-shadow: 0px 0px 4px  rgb(37, 37, 37);
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* form ---> input box  */
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap:1rem;
+
+}
+
+input{
+    width:500px;
+    outline: none;
+    border:none;
+    border-radius: 0.7rem;
+    padding: 0.7rem;
+}
+
+.add-btn{
+    outline: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #054635;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0px 0px 4px  rgb(37, 37, 37);
+    cursor: pointer;
+    /* border-color:#054635; */
+}
+
+/* activity list item css */
+.no_activity_class{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.no_activity_class img{
+    max-width:650px;
+}
+.no_activity_class h3{
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+    color: #054635;
+}
+/* activity container and individual item style */
+.container{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.individual_item{
+    letter-spacing: 0.1rem;
+    
+    width:650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 5px 0.8px rgb(81, 81, 81);
+    padding: 1.2rem;
+    margin-top: 1rem;
+}
+.individual_item p{
+    font-size: 1.3rem;
+}
+.edit-btn{
+    outline: none;
+    border: none;
+    letter-spacing: 0.1rem;
+    width: 80px;
+    height: 40px;
+    border-radius: 0.5rem;
+    background-color: #054635;
+    color: white;
+ 
+    cursor: pointer;
+    margin-right: 0.6rem;
+    box-shadow: 0px 0px 0px 1px #054635;
+}
+.delete-btn{
+    outline: none;
+    border: none;
+    letter-spacing: 0.1rem;
+    width: 80px;
+    height: 40px;
+    border-radius: 0.5rem;
+    background-color: rgb(248, 16, 16);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 1px rgb(206, 103, 103);
+
+}

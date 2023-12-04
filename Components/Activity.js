@@ -2,12 +2,8 @@ import { useState } from "react";
 import "../App.css";
 import { no_item_img_url } from "../config.js";
 
-const Activity = ({userData, setUserData,activityList, setActivityList }) => {
-  const editedItem = (itemId) => {
-    console.log(itemId);
-
-    
-  };
+const Activity = ({editedItem,activityList, setActivityList }) => {
+ 
   const deleteActivity = (itemId) => {
     const filterItem = activityList.filter((item) => {
       return item.id !== itemId;

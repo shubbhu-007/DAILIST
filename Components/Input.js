@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../App.css";
 import Overlay from "./Overlay";
 
-const Input = ({ userData, setUserData, activityList, setActivityList }) => {
+const Input = ({ userData, setUserData, editItemId, setEditItemId, activityList, setActivityList }) => {
   const [showPopUp, setShowPopUp] = useState(false);
 
   const getUserValue = (e) => {
@@ -26,16 +26,28 @@ const Input = ({ userData, setUserData, activityList, setActivityList }) => {
     if (userData.text === undefined || userData.text.trim() === "") {
       setShowPopUp(true);
     } else {
-      const newActivity = {
-        text: userData.text,
-        id: userData.id,
-      };
+      if (editItemId !== null) {
+        //edit existing item
+        const updatedList = activityList.map((item) =>
+          item.id === editItemId ? { ...item, text: userData.text } : item
+        );
+        setActivityList(updatedList);
+        setEditItemId(null);
+      } else {
+        //create new activity
+        const newActivity = {
+          text: userData.text,
+          id: userData.id,
+        };
 
-      setActivityList([...activityList, newActivity]);
+        setActivityList([...activityList, newActivity]);
+      }
 
       resetForm();
     }
   };
+
+  
 
   const closePopUp = () => {
     setShowPopUp(false);
@@ -51,8 +63,8 @@ const Input = ({ userData, setUserData, activityList, setActivityList }) => {
           onChange={getUserValue}
           value={userData.text}
         />
-        <button className="add-btn" onClick={formSubmit}>
-          +
+        <button className={editItemId !== null ? "update-btn" : "add-btn"} onClick={formSubmit}>
+         {editItemId !== null ? "Update" : '+'}
         </button>
       </form>
 

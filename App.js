@@ -14,6 +14,15 @@ const App = () => {
     const [userData ,setUserData ] = useState({text:""});
     console.log(activityList);
 
+    const [editItemId, setEditItemId] = useState(null);
+    const editedItem = (itemId) => {
+        const itemToEdit = activityList.find((item) => item.id === itemId);
+        setEditItemId(itemId);
+        setUserData({
+          text:itemToEdit.text,
+          id:itemId,
+        });
+      };
     
 
 
@@ -26,11 +35,13 @@ const App = () => {
         setUserData = {setUserData} 
         activityList = {activityList}
         setActivityList= {setActivityList}
+        editItemId = {editItemId}
+        setEditItemId = {setEditItemId}
         />
 
         <Activity
-        userData = {userData}
-        setUserData = {setUserData}
+       
+        editedItem = {editedItem}
         activityList = {activityList}
         setActivityList= {setActivityList}
         />

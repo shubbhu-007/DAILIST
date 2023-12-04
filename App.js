@@ -1,15 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { useState } from "react";
+
+
 // Components
 import Header from "./Components/Header";
 import Input from "./Components/Input";
 import Activity from "./Components/Activity";
 
+
 const App = () => {
     const [activityList,setActivityList] = useState([]);
-    const [userData ,setUserData ] = useState({});
+    const [userData ,setUserData ] = useState({text:""});
     console.log(activityList);
+
+    
+
+
     return(
         <>
         <Header/>
@@ -21,7 +28,9 @@ const App = () => {
         setActivityList= {setActivityList}
         />
 
-        <Activity 
+        <Activity
+        userData = {userData}
+        setUserData = {setUserData}
         activityList = {activityList}
         setActivityList= {setActivityList}
         />

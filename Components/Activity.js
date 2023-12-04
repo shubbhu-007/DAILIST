@@ -2,8 +2,10 @@ import { useState } from "react";
 import "../App.css";
 import { no_item_img_url } from "../config.js";
 
-const Activity = ({ activityList, setActivityList }) => {
+const Activity = ({userData, setUserData,activityList, setActivityList }) => {
   const editedItem = (itemId) => {
+    console.log(itemId);
+
     
   };
   const deleteActivity = (itemId) => {

@@ -2,8 +2,8 @@ import { useState } from "react";
 import "../App.css";
 import { no_item_img_url } from "../config.js";
 
-const Activity = ({editedItem,activityList, setActivityList }) => {
- 
+const Activity = ({ editedItem, activityList, setActivityList }) => {
+
   const deleteActivity = (itemId) => {
     const filterItem = activityList.filter((item) => {
       return item.id !== itemId;
@@ -21,8 +21,11 @@ const Activity = ({editedItem,activityList, setActivityList }) => {
       {activityList.map((activity) => {
         return (
           <div className="individual_item" key={activity.id}>
-            <p>{activity.text}</p>
-            <div>
+            <div className="text-container">
+              <p>{activity.text}</p>
+
+            </div>
+            <div className="btn-container">
               <button
                 className="edit-btn"
                 onClick={() => {

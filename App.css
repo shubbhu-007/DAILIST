@@ -112,9 +112,14 @@ input{
     padding: 1.2rem;
     margin-top: 1rem;
 }
-.individual_item p{
+
+.text-container{
+    width: 350px;
+    max-height: 100px;
+    word-wrap: break-word;
     font-size: 1.3rem;
 }
+
 .edit-btn{
     outline: none;
     border: none;
@@ -188,4 +193,88 @@ input{
     box-shadow: 0px 0px 0px 1px rgb(206, 103, 103);
 
 
+}
+
+/* media queries */
+@media (width<=700px){
+    input{
+        width:400px;
+    }
+    .no_activity_class img{
+        max-width: 500px;
+    }
+    .text-container{
+        width: 200px;
+        max-height: 100px;
+        word-wrap: break-word;
+        font-size: 1.3rem;
+    }
+    .individual_item{
+        width:450px;
+    }
+    .individual_item p{
+        overflow: hidden;
+    }
+}
+
+@media (width<=470px){
+    .no_activity_class h3{
+        text-align: center;
+        word-spacing: 0.1rem;
+    }
+    .no_activity_class img{
+        max-width: 300px;
+    }
+    input{
+        width:300px;
+    }
+    .individual_item{
+        width:350px;
+    }
+    .text-container p{
+        font-size: 1rem;
+    }
+    .btn-container{
+        display: flex;
+    }
+    .edit-btn{
+        width:50px;
+    }
+    .delete-btn{
+        width: 60px;
+    }
+}
+@media (width<=360px){
+   
+    .no_activity_class h3{
+        text-align: center;
+    }
+    .no_activity_class img{
+        max-width:300px;
+    }
+    input{
+        width:200px;
+    }
+    .individual_item{
+        width:250px;
+        flex-direction: column;
+        gap:0.6rem;
+        align-items: start;
+    }
+    .text-container p{
+        font-size: 1rem;
+        width: 90%;
+        overflow: hidden;
+    }
+    .edit-btn{
+        width:50px;
+    }
+    .delete-btn{
+        width: 60px;
+    }
+    .update-btn{
+        width: 50px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
 }

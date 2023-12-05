@@ -62,6 +62,7 @@ const Input = ({ userData, setUserData, editItemId, setEditItemId, activityList,
           placeholder="Add your work...."
           onChange={getUserValue}
           value={userData.text}
+          
         />
         <button className={editItemId !== null ? "update-btn" : "add-btn"} onClick={formSubmit}>
          {editItemId !== null ? "Update" : '+'}
